@@ -20,13 +20,13 @@ Objetivo del proyecto: Haciendo uso del método de búsqueda de anchura, optimiz
 
 - El [**repositorio**](https://github.com/sancas96/Final_opt2) 
 
-- El [**notebook**](https://github.com/sancas96/Final_opt2/main/notebooks/reporte_MaxFlowAeiu.ipynb) en el que se basa este proyecto y en formato pdf en la carpeta [**Reporte**](https://github.com/sancas96/Final_opt2/main/notebooks/reporte_MaxFlowAeiu.pdf)
+- El [**notebook**](https://github.com/sancas96/Final_opt2/tree/main/notebooks/reporte_MaxFlowAeiu.ipynb) en el que se basa este proyecto y en formato pdf en la carpeta [**Reporte**](https://github.com/sancas96/Final_opt2/tree/main/notebooks/reporte_MaxFlowAeiu.pdf)
 
-- Las funciones auxiliares [**código**](https://github.com/sancas96/Final_opt2/main/src)
+- Las funciones auxiliares [**código**](https://github.com/sancas96/Final_opt2/tree/main/src)
 
-- En la carpeta [**avances**](https://github.com/sancas96/Final_opt2/main/Avances) se encuentran las carpetas con resúmenes de los respectivos avances que hemos tenido.
+- En la carpeta [**avances**](https://github.com/sancas96/Final_opt2/tree/main/Avances) se encuentran las carpetas con resúmenes de los respectivos avances que hemos tenido.
 
-- En la carpeta [**aws**](https://github.com/sancas96/Final_opt2/main/images) se encuentran las imágenes del uso de aws.
+- En la carpeta [**aws**](https://github.com/sancas96/Final_opt2/tree/main/images) se encuentran las imágenes del uso de aws.
 
 ### Plan de trabajo
 
