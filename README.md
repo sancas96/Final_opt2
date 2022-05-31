@@ -20,7 +20,7 @@ Objetivo del proyecto: Haciendo uso del método de búsqueda de anchura, optimiz
 
 - El [**repositorio**](https://github.com/sancas96/Final_opt2) 
 
-- El [**notebook**](https://github.com/sancas96/Final_opt2/tree/main/notebooks/reporte_MaxFlowAeiu.ipynb) en el que se basa este proyecto y en formato pdf en la carpeta [**Reporte**](https://github.com/sancas96/Final_opt2/tree/main/notebooks/reporte_MaxFlowAeiu.pdf)
+- El [**notebook**](https://github.com/sancas96/Final_opt2/blob/main/notebooks/reporte_equipo_2_proyecto_final.ipynb) en el que se basa este proyecto y en formato pdf en la carpeta [**Reporte**](https://github.com/sancas96/Final_opt2/tree/main/notebooks/reporte_MaxFlowAeiu.pdf)
 
 - Las funciones auxiliares [**código**](https://github.com/sancas96/Final_opt2/tree/main/src)
 
