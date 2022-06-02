@@ -12,7 +12,7 @@ Install package with:
 
    #execute next line being in `src` dir where `setup.py` file is 
    #after cloning repo:
-   #https://github.com/optimizacion-2-2022-gh-classroom/practica-2-segunda-parte-EddOselotl
+   #https://github.com/sancas96/Final_opt2
    pip install .
 
 or in editable mode:
@@ -21,11 +21,11 @@ or in editable mode:
 
    #execute next line being in `src` dir where `setup.py` file is 
    #after cloning repo:
-   #https://github.com/optimizacion-2-2022-gh-classroom/practica-2-segunda-parte-EddOselotl
+   #https://github.com/sancas96/Final_opt2
    pip install -e .
 
 or with url:
 
 .. code-block:: bash
 
-    pip install "git+https://github.com/optimizacion-2-2022-gh-classroom/practica-2-segunda-parte-EddOselotl.git#egg=MaxFlowAeiu2&subdirectory=src"
+    pip install "git+https://github.com/sancas96/Final_opt2.git#egg=MaxFlowAeiu2&subdirectory=src"
