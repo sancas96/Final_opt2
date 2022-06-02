@@ -66,8 +66,134 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="maxflowaeiu-module">
-<h1>MaxFlowAeiu module<a class="headerlink" href="#maxflowaeiu-module" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-MaxFlowAeiu">
+<span id="maxflowaeiu-module"></span><h1>MaxFlowAeiu module<a class="headerlink" href="#module-MaxFlowAeiu" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="MaxFlowAeiu.MaxFlowAeiu">
+<em class="property">class </em><code class="sig-prename descclassname">MaxFlowAeiu.</code><code class="sig-name descname">MaxFlowAeiu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">graph</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/MaxFlowAeiu.html#MaxFlowAeiu"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#MaxFlowAeiu.MaxFlowAeiu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Finds the paths in order to return the maximum flow in the
+network. This class implements the Ford Fulkerson method.</p>
+<dl class="py method">
+<dt id="MaxFlowAeiu.MaxFlowAeiu.busq_anchura">
+<code class="sig-name descname">busq_anchura</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">source</span></em>, <em class="sig-param"><span class="n">sink</span></em>, <em class="sig-param"><span class="n">parent</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/MaxFlowAeiu.html#MaxFlowAeiu.busq_anchura"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#MaxFlowAeiu.MaxFlowAeiu.busq_anchura" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines queue of the visited nodes and the parents of them, and
+so long as the queue of the nodes that need to be visited is not empty, the algorithm goes on.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<em>int</em>) – index the source node of the graph.</p></li>
+<li><p><strong>sink</strong> (<em>int</em>) – index the sink node of the graph.</p></li>
+<li><p><strong>parent</strong> (<em>list</em>) – vector for keeping track of the parents of visited nodes.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="MaxFlowAeiu.MaxFlowAeiu.visit">
+<code class="sig-name descname">visit</code><a class="headerlink" href="#MaxFlowAeiu.MaxFlowAeiu.visit" title="Permalink to this definition">¶</a></dt>
+<dd><p>vector for keeping track of visited nodes,</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="MaxFlowAeiu.MaxFlowAeiu.queue">
+<code class="sig-name descname">queue</code><a class="headerlink" href="#MaxFlowAeiu.MaxFlowAeiu.queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>the queue of the nodes needed to be visited,</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="MaxFlowAeiu.MaxFlowAeiu.parent">
+<code class="sig-name descname">parent</code><a class="headerlink" href="#MaxFlowAeiu.MaxFlowAeiu.parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>vector for keeping track of the parents of visited nodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A True/False indicating the presence or absence of a path.
+It also updates the parent list with the information necessary to reconstruct the path.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>(bool)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="MaxFlowAeiu.MaxFlowAeiu.ford_fulkerson">
+<code class="sig-name descname">ford_fulkerson</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/MaxFlowAeiu.html#MaxFlowAeiu.ford_fulkerson"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#MaxFlowAeiu.MaxFlowAeiu.ford_fulkerson" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the Ford Fulkerson method, keeping and updating the residual graph
+and running over the bfs function in all the nodes.
+:param source: index the source node of the graph.
+:type source: int
+:param sink: index the sink node of the graph.
+:type sink: int</p>
+<dl class="py attribute">
+<dt id="MaxFlowAeiu.MaxFlowAeiu.residualgraph">
+<code class="sig-name descname">residualgraph</code><a class="headerlink" href="#MaxFlowAeiu.MaxFlowAeiu.residualgraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>matrix the residual graph,</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>matrix</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="MaxFlowAeiu.MaxFlowAeiu.path_flow">
+<code class="sig-name descname">path_flow</code><a class="headerlink" href="#MaxFlowAeiu.MaxFlowAeiu.path_flow" title="Permalink to this definition">¶</a></dt>
+<dd><p>we need to calculate the min flow of the selected path,</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id0">
+<code class="sig-name descname">parent</code><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd><p>vector for keeping track of the parents of visited nodes.</p>
+</dd></dl>
+
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>calculated maximum flow of the graph.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>maximum_flow (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="MaxFlowAeiu.MaxFlowAeiu.infoMF">
+<code class="sig-name descname">infoMF</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/MaxFlowAeiu.html#MaxFlowAeiu.infoMF"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#MaxFlowAeiu.MaxFlowAeiu.infoMF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtains the information of the graph, regarding to the number of nodes and arcs
+:param grapf: defines the graph from a matrix.
+:type grapf: matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Printed info of the graph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 
 
