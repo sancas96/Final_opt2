@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MaxFlowAeiu module &mdash; Max-Flow 0.1.2 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>MaxFlowAeiu module &mdash; Max-Flow 0.1.4 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
@@ -26,7 +26,7 @@
             <a href="index.html" class="icon icon-home"> Max-Flow
           </a>
               <div class="version">
-                0.1.2
+                0.1.4
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -70,7 +70,7 @@
 <span id="maxflowaeiu-module"></span><h1>MaxFlowAeiu module<a class="headerlink" href="#module-MaxFlowAeiu" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt id="MaxFlowAeiu.MaxFlowAeiu">
-<em class="property">class </em><code class="sig-prename descclassname">MaxFlowAeiu.</code><code class="sig-name descname">MaxFlowAeiu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">graph</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/MaxFlowAeiu.html#MaxFlowAeiu"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#MaxFlowAeiu.MaxFlowAeiu" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">MaxFlowAeiu.</code><code class="sig-name descname">MaxFlowAeiu</code><a class="reference internal" href="_modules/MaxFlowAeiu.html#MaxFlowAeiu"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#MaxFlowAeiu.MaxFlowAeiu" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Finds the paths in order to return the maximum flow in the
 network. This class implements the Ford Fulkerson method.</p>
@@ -142,8 +142,8 @@ and running over the bfs function in all the nodes.
 :param sink: index the sink node of the graph.
 :type sink: int</p>
 <dl class="py attribute">
-<dt id="MaxFlowAeiu.MaxFlowAeiu.residualgraph">
-<code class="sig-name descname">residualgraph</code><a class="headerlink" href="#MaxFlowAeiu.MaxFlowAeiu.residualgraph" title="Permalink to this definition">¶</a></dt>
+<dt id="MaxFlowAeiu.MaxFlowAeiu.graph">
+<code class="sig-name descname">graph</code><a class="headerlink" href="#MaxFlowAeiu.MaxFlowAeiu.graph" title="Permalink to this definition">¶</a></dt>
 <dd><p>matrix the residual graph,</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -180,6 +180,14 @@ and running over the bfs function in all the nodes.
 </dd></dl>
 
 <dl class="py method">
+<dt id="MaxFlowAeiu.MaxFlowAeiu.get_maximumflow">
+<code class="sig-name descname">get_maximumflow</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/MaxFlowAeiu.html#MaxFlowAeiu.get_maximumflow"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#MaxFlowAeiu.MaxFlowAeiu.get_maximumflow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the Maximun flow of the graph, calculate tu algorithom
+:returns: calculated maximum flow of the graph.
+:rtype: maximum_flow (int)</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="MaxFlowAeiu.MaxFlowAeiu.infoMF">
 <code class="sig-name descname">infoMF</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/MaxFlowAeiu.html#MaxFlowAeiu.infoMF"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#MaxFlowAeiu.MaxFlowAeiu.infoMF" title="Permalink to this definition">¶</a></dt>
 <dd><p>Obtains the information of the graph, regarding to the number of nodes and arcs
@@ -206,7 +214,7 @@ and running over the bfs function in all the nodes.
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Equipo2 Optimizacion2.</p>
+    <p>&#169; Copyright 2022, Temas selectos de Modelado.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
