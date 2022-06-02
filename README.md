@@ -30,6 +30,8 @@ Objetivo del proyecto: Haciendo uso del método de búsqueda de anchura, optimiz
 
 - En la siguiente liga en [**drive**](https://docs.google.com/presentation/d/19PnfL7ZOWmx0ne1jtrGY1M-PxDk5qNjbqlouNkFvcb4/edit?usp=sharing) se puede consultar la presentación referente a este proyecto.
 
+- Aquí se puede consultar la [**documentación**](https://sancas96.github.io/Final_opt2/index.html) referente a la paquetería desarrollada en este repositorio.
+
 ### Plan de trabajo
 
 |Fecha | Actividad|Descripción|
