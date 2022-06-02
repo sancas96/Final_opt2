@@ -1,12 +1,10 @@
-from collections import defaultdict
-
 class MaxFlowAeiu:
     '''
         Finds the paths in order to return the maximum flow in the
         network. This class implements the Ford Fulkerson method.
     '''
 
-    def __init__(self,graph):
+    def _init_(self,graph):
         '''
         Initialices parts of the problem.
         Attributes:
@@ -14,16 +12,14 @@ class MaxFlowAeiu:
             N (bool): the number of the nodes in the graph,
             source (int): index the source node of the graph,
             sink (int): index the sink node of the graph.
-            residualgraph(matrix):graph where the residual values 
-                                  of the edges are updated after 
-                                  each iteration.
+            
         '''
-        self.graph = graph
+        self.graph = graph.copy()
         self.N = len(graph)
         self.source = 0      
         self.sink= self.N-1
-        self.residualgraph = self.graph
-    
+        self.maximum_flow =0
+
     def busq_anchura(self,source,sink,parent): 
         '''
         Defines queue of the visited nodes and the parents of them, and
@@ -57,14 +53,14 @@ class MaxFlowAeiu:
 
             # se extrae siempre el primer valor del queue y seb asigna a u
             u = queue.pop(0)
-            
+
             # Se requiere tanto el index como el valor del nodo que sera padre
             for index, value in enumerate(self.graph[u]): 
                 if visit[index]== False and value > 0:
                     queue.append(index)
                     visit[index] = True
                     parent[index]=u
-        
+
         # Se crea un check ternario para regresar True 
         # si el camino sido recorrido completamente False de lo contrario
         return True if visit[sink] else False
@@ -79,7 +75,7 @@ class MaxFlowAeiu:
             source (int): index the source node of the graph.
             sink (int): index the sink node of the graph.
         Attributes:
-            residualgraph (matrix):matrix the residual graph,
+            graph (matrix):matrix the residual graph,
             path_flow (float): we need to calculate the min flow of the selected path,
             parent: vector for keeping track of the parents of visited nodes.
         Returns:
@@ -91,36 +87,61 @@ class MaxFlowAeiu:
 
         # se inicia maximun_flow en 0
         maximum_flow=0
-            
+
         while self.busq_anchura(self.source,self.sink,parent):
             # se inicia pathflow en inf float 
             # que contendra el minimo flujo del path seleccionado
             path_flow = float('inf')     
             j = self.sink                    
-                
+
             while not j == self.source:
                 # se calcula el minimo de todo el path 
-                path_flow=min(path_flow, self.residualgraph[parent[j]][j])
+                path_flow=min(path_flow, self.graph[parent[j]][j])
                 # se asigna el valor del nodo padre  
                 j=parent[j]
 
-            
-            # se actualiza los valores residuales de los edges en self.residualgraph
+
+            # se actualiza los valores residuales de los edges en graph
             v = self.sink
             while not v == self.source:
                 u=parent[v]
-                self.residualgraph[u][v] -= path_flow                   
-                self.residualgraph[v][u] += path_flow
+                self.graph[u][v] -= path_flow                   
+                self.graph[v][u] += path_flow
                 v=parent[v]
 
 
             # se agrega el path_flow para calcular el maximo
-            maximum_flow += path_flow  
+            self.maximum_flow += path_flow  
+
+        return print("maximun flow is",self.maximum_flow)
+
+
+    def get_maximumflow(self):
+        '''
+        Get the Maximun flow of the graph, calculate tu algorithom
+        Returns:
+            maximum_flow (int): calculated maximum flow of the graph.
+        '''
+        return self.maximum_flow
+
+    # metodo para obtener información del grafo
+    def infoMF(self):
+        '''
+        Obtains the information of the graph, regarding to the number of nodes and arcs
+        Args:
+            grapf (matrix): defines the graph from a matrix.
+        Returns:
+            Printed info of the graph.
             
-        return maximum_flow
-        
-    
-    
-        
-        
-        
+        '''
+        # Función para contar nodos y ramas
+        rama = 0
+        arreglo = self.graph
+        for i in range(len(arreglo)):
+            for m in range(len(arreglo[i])):
+                if arreglo[i][m] == 0:
+                    pass
+                else:
+                    rama = rama + 1
+        print("nodos",len(arreglo))
+        print("ramas",rama)

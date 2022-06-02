@@ -20,13 +20,13 @@ sys.path.insert(0, os.path.abspath('../MaxFlowAeiu/'))
 # -- Project information -----------------------------------------------------
 
 project = 'Max-Flow'
-copyright = '2022, Equipo2 Optimizacion2'
+copyright = '2022, Temas selectos de Modelado'
 author = 'Equipo2'
 
 # The short X.Y version
-version = '0.1.2'
+version = '0.1.4'
 # The full version, including alpha/beta/rc tags
-release = '0.1.2'
+release = '0.1.4'
 
 
 # -- General configuration ---------------------------------------------------
