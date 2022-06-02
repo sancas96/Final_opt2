@@ -13,7 +13,7 @@ Install package with:
    #execute next line being in `src` dir where `setup.py` file is 
    #after cloning repo:
    #https://github.com/sancas96/Final_opt2
-   pip install .
+   pip install MaxFlowAeiu
 
 or in editable mode:
 
