@@ -28,6 +28,8 @@ Objetivo del proyecto: Haciendo uso del método de búsqueda de anchura, optimiz
 
 - En la carpeta [**aws**](https://github.com/sancas96/Final_opt2/tree/main/images) se encuentran las imágenes del uso de aws.
 
+- En la siguiente liga en [**drive**](https://docs.google.com/presentation/d/19PnfL7ZOWmx0ne1jtrGY1M-PxDk5qNjbqlouNkFvcb4/edit?usp=sharing) se puede consultar la presentación referente a este proyecto.
+
 ### Plan de trabajo
 
 |Fecha | Actividad|Descripción|
@@ -39,3 +41,4 @@ Objetivo del proyecto: Haciendo uso del método de búsqueda de anchura, optimiz
 |26 May 2022| Revisión del segundo avance| Segunda revisión global al proyecto mínimo al 95%|
 |28 May 2022| Atención de feedbacks|Se atenderán todos los feedbacks del segundo avance|
 |31 May 2022| Revisión de tercer avance| Última revisión global al proyecto|
+|02 Jun 2022| Fin de proyecto| Presentación final|
